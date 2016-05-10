@@ -21,7 +21,7 @@
 
  NeoBundle 'Shougo/unite.vim'
  NeoBundle 'w0ng/vim-hybrid'
-
+ NeoBundle 'scrooloose/nerdtree'
 
  call neobundle#end()
 
@@ -53,3 +53,9 @@ set noswapfile
 set title
 set incsearch
 set visualbell
+
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+nnoremap <CR> A<CR><ESC>
+noremap <S-h> ^
+noremap <S-l> $
+
