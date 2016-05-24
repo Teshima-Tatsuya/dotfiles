@@ -5,7 +5,7 @@ fi
 # alias settings
 alias la='ls -la'
 
-# alisa vagrant
+# alias vagrant
 alias vu='vagrant up'
 alias vs='vagrant suspend'
 alias vssh='vagrant ssh'
