@@ -1,61 +1,54 @@
- " Note: Skip initialization for vim-tiny or vim-small.
- if 0 | endif
 
- if &compatible
-   set nocompatible               " Be iMproved
- endif
+" プラグインが実際にインストールされるディレクトリ
+let s:dein_dir = expand('~/.vim/dein')
+" dein.vim 本体
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
- " Required:
- set runtimepath^=~/.vim/bundle/neobundle.vim/
+" dein.vim がなければ github から落としてくる
+if &runtimepath !~# '/dein.vim'
+  if !isdirectory(s:dein_repo_dir)
+    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+  endif
+  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
+endif
 
- " Required:
- call neobundle#begin(expand('~/.vim/bundle/'))
+" 設定開始
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
 
- " Let NeoBundle manage NeoBundle
- " Required:
- NeoBundleFetch 'Shougo/neobundle.vim'
+  " プラグインリストを収めた TOML ファイル
+  " ~/.vim/rc/dein.toml,deinlazy.tomlを用意する
+  let g:rc_dir    = expand('~/.vim/rc')
+  let s:toml      = g:rc_dir . '/dein.toml'
+  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
 
- " My Bundles here:
- " Refer to |:NeoBundle-examples|.
- " Note: You don't set neobundle setting in .gvimrc!
+  " TOML を読み込み、キャッシュしておく
+  call dein#load_toml(s:toml,      {'lazy': 0})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
- NeoBundle 'Shougo/unite.vim'
- NeoBundle 'w0ng/vim-hybrid'
- NeoBundle 'scrooloose/nerdtree'
+  " 設定終了
+  call dein#end()
+  call dein#save_state()
+endif
 
- call neobundle#end()
+" もし、未インストールものものがあったらインストール
+if dein#check_install()
+  call dein#install()
+endif
 
- " Required:
- filetype plugin indent on
+filetype plugin indent on
 
- " If there are uninstalled bundles found on startup,
- " this will conveniently prompt you to install them.
- NeoBundleCheck
-
-
-
-" show row number
+" environment settings
 set number
-" set tab width 4
-set tabstop=4
-" highlight searching word
-set hlsearch
-
-"
-" colors setting
-"
-" set screen colors 256
-set t_Co=256
-colorscheme hybrid
-
 set ruler
-set noswapfile
+set showmatch
 set title
-set incsearch
-set visualbell
+set visualbell t_vb=
 
+
+" key mapping
+noremap j gj
+noremap k gk
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
-nnoremap <CR> A<CR><ESC>
-noremap <S-h> ^
-noremap <S-l> $
+
 
