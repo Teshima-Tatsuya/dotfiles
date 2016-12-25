@@ -51,4 +51,9 @@ noremap j gj
 noremap k gk
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
+" 引数無しで起動するとNERDTreeを起動
+let file_name = expand('%')
+if has('vim_starting') &&  file_name == ''
+  autocmd VimEnter * NERDTree ./
+endif
 
