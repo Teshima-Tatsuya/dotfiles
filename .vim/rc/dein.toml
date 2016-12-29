@@ -7,3 +7,5 @@ repo = 'Shougo/unite.vim'
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 
+[[plugins]]
+repo = 'tomasr/molokai'
