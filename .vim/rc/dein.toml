@@ -13,3 +13,18 @@ repo = 'tomasr/molokai'
 [[plugins]]
 repo = 'scrooloose/syntastic'
 
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+
+[[plugins]]
+repo = 'vim-scripts/twilight'
+
+[[plugins]]
+repo = 'sjl/badwolf'
+
+[[plugins]]
+repo = 'sickill/vim-monokai'
+
