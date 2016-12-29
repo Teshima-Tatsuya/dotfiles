@@ -38,8 +38,8 @@ if dein#check_install()
 endif
 
 runtime! userautoload/*.vim
+runtime! userautoload/plugins/*.vim
 filetype plugin indent on
-
 
 " 引数無しで起動するとNERDTreeを起動
 let file_name = expand('%')
