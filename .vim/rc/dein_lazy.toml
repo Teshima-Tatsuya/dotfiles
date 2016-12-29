@@ -4,7 +4,8 @@ on_i = 1
 
 [[plugins]]
 repo = 'tpope/vim-endwise'
+on_ft = 'ruby'
 
 [[plugins]]
 repo = 'tomtom/tcomment_vim'
-
+on_ft = 'ruby'

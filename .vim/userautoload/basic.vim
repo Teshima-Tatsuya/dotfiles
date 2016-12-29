@@ -8,4 +8,3 @@ set nobackup
 set noswapfile
 set showcmd
 set cursorline
-
