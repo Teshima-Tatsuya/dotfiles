@@ -14,17 +14,6 @@ repo = 'tomasr/molokai'
 repo = 'scrooloose/syntastic'
 
 [[plugins]]
-repo = 'w0ng/vim-hybrid'
+repo = 'nathanaelkane/vim-indent-guides'
 
-[[plugins]]
-repo = 'altercation/vim-colors-solarized'
-
-[[plugins]]
-repo = 'vim-scripts/twilight'
-
-[[plugins]]
-repo = 'sjl/badwolf'
-
-[[plugins]]
-repo = 'sickill/vim-monokai'
 
