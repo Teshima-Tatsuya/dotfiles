@@ -7,4 +7,5 @@ logs/
 
 .cache
 repos/
-
+cache_vim
+state_vim.vim
