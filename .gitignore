@@ -9,3 +9,5 @@ logs/
 repos/
 cache_vim
 state_vim.vim
+
+.gitconfig.local
