@@ -8,6 +8,10 @@ repo = 'Shougo/unite.vim'
 repo = 'Shougo/neomru.vim'
 
 [[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]]
 repo = 'scrooloose/nerdtree'
 
 [[plugins]]

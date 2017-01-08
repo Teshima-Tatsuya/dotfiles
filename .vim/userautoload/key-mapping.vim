@@ -5,7 +5,7 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 " unite
 nnoremap <C-f> :Unite<Space>file_mru<CR>
-nnoremap <C-p> :Unite<Space>file_rec<CR>
+nnoremap <C-p> :Unite<Space>file_rec/git<CR>
 
 " Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
