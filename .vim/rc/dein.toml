@@ -34,3 +34,6 @@ repo = 'bronson/vim-trailing-whitespace'
 
 [[plugins]]
 repo = 'soramugi/auto-ctags.vim'
+
+[[plugins]]
+repo = 'simeji/winresizer'
