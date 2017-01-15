@@ -21,3 +21,12 @@ on_ft = 'ruby'
 [[plugins]]
 repo = 'slim-template/vim-slim'
 on_ft = 'slim'
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = 'javascript'
+
+[[plugins]]
+repo = 'mxw/vim-jsx'
+on_ft = 'javascript'
+
