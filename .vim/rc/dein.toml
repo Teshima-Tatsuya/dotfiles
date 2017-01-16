@@ -37,3 +37,6 @@ repo = 'soramugi/auto-ctags.vim'
 
 [[plugins]]
 repo = 'simeji/winresizer'
+
+[[plugins]]
+repo = 'majutsushi/tagbar'
