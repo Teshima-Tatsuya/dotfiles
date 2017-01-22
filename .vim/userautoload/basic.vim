@@ -9,3 +9,6 @@ set noswapfile
 set showcmd
 set cursorline
 set backspace=indent,eol,start
+set nocompatible
+set hlsearch
+set noerrorbells
