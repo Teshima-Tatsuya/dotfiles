@@ -12,3 +12,5 @@ set backspace=indent,eol,start
 set nocompatible
 set hlsearch
 set noerrorbells
+set mouse=a
+set incsearch
