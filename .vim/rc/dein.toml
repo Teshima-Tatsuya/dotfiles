@@ -40,3 +40,6 @@ repo = 'simeji/winresizer'
 
 [[plugins]]
 repo = 'majutsushi/tagbar'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
