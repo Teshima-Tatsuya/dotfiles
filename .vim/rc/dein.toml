@@ -43,3 +43,7 @@ repo = 'majutsushi/tagbar'
 
 [[plugins]]
 repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = 'go'
