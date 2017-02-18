@@ -3,6 +3,12 @@ noremap j gj
 noremap k gk
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
+" buffer
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :first<CR>
+nnoremap <silent> ]B :blast<CR>
+
 " unite
 nnoremap <C-f> :Unite<Space>file_mru<CR>
 nnoremap <C-p> :Unite<Space>file_rec/git<CR>

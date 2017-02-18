@@ -34,3 +34,6 @@ on_ft = 'javascript'
 repo = 'mtscout6/syntastic-local-eslint.vim'
 on_ft = 'javascript'
 
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'

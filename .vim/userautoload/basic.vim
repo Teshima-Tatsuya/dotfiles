@@ -14,3 +14,4 @@ set hlsearch
 set noerrorbells
 set mouse=a
 set incsearch
+set hidden
