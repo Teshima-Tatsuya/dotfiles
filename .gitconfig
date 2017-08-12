@@ -29,3 +29,5 @@
 	trustExitCode = true
 [commit]
 	template = /Users/user/.stCommitMsg
+[ghq]
+    root=~/src
