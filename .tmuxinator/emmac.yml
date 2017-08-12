@@ -1,0 +1,15 @@
+# ~/.tmuxinator/myenv.yml
+
+name: myenv
+root: /Users/tatsuya/Dropbox/my/prog/rails/error-matome
+
+tmux_options: -2
+
+windows:
+  - editor: vim
+  - git:
+  - dotfile:
+    - cd ~/dotfiles
+    - vim
+  - server: bundle exec rails s -b 0.0.0.0
+  - guard: bundle exec guard

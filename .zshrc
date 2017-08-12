@@ -38,7 +38,6 @@ autoload -U colors; colors
 PROMPT="%{${fg[green]}%}%n@%m%{${reset_color}%} %~
 %# "
 
-# alias vagrant
-alias vu='vagrant up'
-alias vs='vagrant suspend'
-alias vssh='vagrant ssh'
+if [ -f "${HOME}/.common.conf" ] ; then
+  source "${HOME}/.common.conf"
+fi

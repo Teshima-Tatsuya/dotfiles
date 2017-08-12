@@ -46,3 +46,11 @@ if has('vim_starting') && dein#check_install()
     call dein#install()
 endif
 " }}}
+
+
+" 引数無しで起動するとNERDTreeを起動
+let file_name = expand('%')
+if has('vim_starting') &&  file_name == ''
+  autocmd VimEnter * NERDTree ./
+endif
+

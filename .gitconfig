@@ -1,6 +1,6 @@
 [core]
 	editor = vim
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/tatsuya/.gitignore_global
 [color]
 	ui = auto
 	status = auto
@@ -18,3 +18,14 @@
 	ac = !git aa && git cm
 [include]
 	path = ~/.gitconfig.local
+[user]
+	name = 
+	email = 
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/user/.stCommitMsg
