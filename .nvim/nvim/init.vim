@@ -47,6 +47,10 @@ if has('vim_starting') && dein#check_install()
 endif
 " }}}
 
+set runtimepath+=$XDG_CONFIG_HOME
+runtime! userautoload/*.vim
+runtime! userautoload/plugins/*.vim
+filetype plugin indent on
 
 " 引数無しで起動するとNERDTreeを起動
 let file_name = expand('%')

@@ -5,3 +5,18 @@ hook_add = 'let g:deoplete#enable_at_startup = 1'
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 
+[[plugins]]
+repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'tpope/vim-rails'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'soramugi/auto-ctags.vim'
+
