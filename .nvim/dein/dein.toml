@@ -1,6 +1,7 @@
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_add = 'let g:deoplete#enable_at_startup = 1'
+on_i = 1
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
@@ -20,3 +21,13 @@ repo = 'airblade/vim-gitgutter'
 [[plugins]]
 repo = 'soramugi/auto-ctags.vim'
 
+[[plugins]]
+repo = 'fatih/vim-go'
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim.git'
+on_i = 1
+on_ft = 'snipppet'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
