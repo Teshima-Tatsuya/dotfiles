@@ -52,3 +52,5 @@ function peco-src () {
 }
 zle -N peco-src
 bindkey '^]' peco-src
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

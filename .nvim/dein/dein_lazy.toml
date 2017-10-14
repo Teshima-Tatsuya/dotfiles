@@ -5,3 +5,23 @@ on_ft  = 'toml'
 [[plugins]]
 repo = 'tpope/vim-endwise'
 on_ft  = 'ruby'
+
+[[plugins]]
+repo = 'slim-template/vim-slim'
+on_ft = 'slim'
+
+[[plugins]]
+repo = 'Shougo/deoplete-rct'
+on_ft = 'ruby'
+
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = 'go'
+
+[[plugins]]
+repo = 'Shougo/neosnippet'
+on_i = 1
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+on_i = 1

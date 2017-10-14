@@ -10,8 +10,8 @@ nnoremap <silent> [B :first<CR>
 nnoremap <silent> ]B :blast<CR>
 
 " unite
-nnoremap <C-f> :Unite<Space>file_mru<CR>
-nnoremap <C-p> :Unite<Space>file_rec/git<CR>
+nnoremap <C-f> :Denite<Space>file_mru<CR>
+nnoremap <C-p> :Denite<Space>file_rec/git<CR>
 
 " Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
