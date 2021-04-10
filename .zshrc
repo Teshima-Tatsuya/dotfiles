@@ -55,8 +55,4 @@ bindkey '^]' peco-src
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/teshima/ダウンロード/google-cloud-sdk-185.0.0-linux-x86_64/google-cloud-sdk/path.zsh.inc' ]; then source '/home/teshima/ダウンロード/google-cloud-sdk-185.0.0-linux-x86_64/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/teshima/ダウンロード/google-cloud-sdk-185.0.0-linux-x86_64/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/teshima/ダウンロード/google-cloud-sdk-185.0.0-linux-x86_64/google-cloud-sdk/completion.zsh.inc'; fi
+eval "$(anyenv init -)"
