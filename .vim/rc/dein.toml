@@ -2,16 +2,6 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'Shougo/unite.vim'
-
-[[plugins]]
-repo = 'Shougo/neomru.vim'
-
-[[plugins]]
-repo = 'Shougo/vimproc.vim'
-build = 'make'
-
-[[plugins]]
 repo = 'scrooloose/nerdtree'
 
 [[plugins]]
@@ -30,21 +20,5 @@ repo = 'airblade/vim-gitgutter'
 repo = 'bronson/vim-trailing-whitespace'
 
 [[plugins]]
-repo = 'soramugi/auto-ctags.vim'
-
-[[plugins]]
-repo = 'simeji/winresizer'
-
-[[plugins]]
-repo = 'majutsushi/tagbar'
-
-[[plugins]]
 repo = 'tpope/vim-surround'
-
-[[plugins]]
-repo = 'fatih/vim-go'
-on_ft = 'go'
-
-[[plugins]]
-repo = 'w0rp/ale'
 
