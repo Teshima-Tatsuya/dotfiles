@@ -1,16 +1,4 @@
 [[plugins]]
-repo = 'Shougo/neocomplete.vim'
-on_i = 1
-
-[[plugins]]
-repo = 'Shougo/neosnippet'
-on_i = 1
-
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
-on_i = 1
-
-[[plugins]]
 repo = 'tpope/vim-endwise'
 on_ft = 'ruby'
 
@@ -19,26 +7,7 @@ repo = 'tomtom/tcomment_vim'
 on_ft = 'ruby'
 
 [[plugins]]
-repo = 'slim-template/vim-slim'
-on_ft = 'slim'
-
-[[plugins]]
-repo = 'pangloss/vim-javascript'
-on_ft = 'javascript'
-
-[[plugins]]
-repo = 'mxw/vim-jsx'
-on_ft = 'javascript'
-
-[[plugins]]
-repo = 'mtscout6/syntastic-local-eslint.vim'
-on_ft = 'javascript'
-
-[[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
-[[plugins]]
-repo = 'prettier/vim-prettier'
-on_ft = ['javascript', 'typescript', 'css', 'scss', 'markdown']
 
