@@ -13,10 +13,6 @@ nnoremap <silent> ]B :blast<CR>
 nnoremap <C-f> :Denite<Space>file_mru<CR>
 nnoremap <C-p> :Denite<Space>file_rec/git<CR>
 
-" Plugin key-mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 " tagbar
 nmap <F8> :TagbarToggle<CR>

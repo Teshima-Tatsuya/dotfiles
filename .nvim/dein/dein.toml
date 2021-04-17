@@ -7,6 +7,16 @@ on_i = 1
 repo = 'Shougo/deoppet.nvim'
 
 [[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+
+[[plugins]]
+repo = 'lighttiger2505/deoplete-vim-lsp'
+
+
+[[plugins]]
 repo = 'scrooloose/nerdtree'
 
 [[plugins]]
@@ -22,17 +32,10 @@ repo = 'tpope/vim-fugitive'
 repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
-repo = 'soramugi/auto-ctags.vim'
-
-
-[[plugins]]
 repo = 'Shougo/denite.nvim'
 
 [[plugins]]
 repo = 'Shougo/neomru.vim'
-
-[[plugins]]
-repo = 'w0rp/ale'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
