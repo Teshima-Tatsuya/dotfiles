@@ -13,6 +13,9 @@ repo = 'prabirshrestha/vim-lsp'
 repo = 'mattn/vim-lsp-settings'
 
 [[plugins]]
+repo = 'mattn/vim-goimports'
+
+[[plugins]]
 repo = 'lighttiger2505/deoplete-vim-lsp'
 
 
