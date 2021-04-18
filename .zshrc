@@ -56,3 +56,4 @@ bindkey '^]' peco-src
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 eval "$(anyenv init -)"
+export PATH="/opt/homebrew/opt/luajit-openresty/bin:$PATH"
