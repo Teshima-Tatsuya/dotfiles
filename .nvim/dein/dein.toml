@@ -4,6 +4,9 @@ hook_add = 'let g:deoplete#enable_at_startup = 1'
 on_i = 1
 
 [[plugins]]
+repo = 'Shougo/defx.nvim'
+
+[[plugins]]
 repo = 'Shougo/deoppet.nvim'
 
 [[plugins]]
@@ -17,10 +20,6 @@ repo = 'mattn/vim-goimports'
 
 [[plugins]]
 repo = 'lighttiger2505/deoplete-vim-lsp'
-
-
-[[plugins]]
-repo = 'scrooloose/nerdtree'
 
 [[plugins]]
 repo = 'tomasr/molokai'
