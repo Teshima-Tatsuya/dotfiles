@@ -15,9 +15,13 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt bang_hist
+# 履歴にtimestampを含める
 setopt extended_history
+# 直前と同じコマンドをヒストリーに追加しない
 setopt hist_ignore_dups
+# 複数のプロンプトと履歴を共有する
 setopt share_history
+# 履歴追加時に余計な空白を除外する
 setopt hist_reduce_blanks
 
 # Look and Feel
