@@ -13,10 +13,7 @@ nnoremap <silent> ]B :blast<CR>
 nnoremap <C-f> :Denite<Space>file_mru<CR>
 nnoremap <C-p> :Denite<Space>file_rec/git<CR>
 
-
-" tagbar
-nmap <F8> :TagbarToggle<CR>
-
+" Insert mode To Nomal mode keymap
 inoremap <silent> jj <ESC>
 
 " For conceal markers.
