@@ -23,3 +23,6 @@ inoremap <silent> jj <ESC>
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
+
+" For terminal
+tnoremap <Esc> <C-\><C-n>
