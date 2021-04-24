@@ -9,9 +9,14 @@ nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :first<CR>
 nnoremap <silent> ]B :blast<CR>
 
+" tab
+nnoremap <silent> T <C-W>T<CR>
 " unite
 nnoremap <C-f> :Denite<Space>file_mru<CR>
 nnoremap <C-p> :Denite<Space>file_rec/git<CR>
+
+" Defx
+nnoremap <silent><C-e> :Defx<CR>
 
 " Insert mode To Nomal mode keymap
 inoremap <silent> jj <ESC>
