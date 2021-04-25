@@ -1,3 +1,5 @@
+" Leader
+let mapleader = "\<Space>"
 " key mapping
 nnoremap j gj
 nnoremap k gk
@@ -11,9 +13,10 @@ nnoremap <silent> ]B :blast<CR>
 
 " tab
 nnoremap <silent> T <C-W>T<CR>
-" unite
-nnoremap <C-f> :Denite<Space>file_mru<CR>
-nnoremap <C-p> :Denite<Space>file_rec/git<CR>
+
+" Denite
+nnoremap <Leader>f :Denite<Space>file_mru<CR>
+nnoremap <Leader>p :Denite<Space>file_rec/git<CR>
 
 " Defx
 nnoremap <silent><C-e> :Defx<CR>
