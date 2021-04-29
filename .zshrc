@@ -1,5 +1,8 @@
+# cdコマンド発行時に自動的にpushdする
+# cd -<TAB>で履歴を確認し、cd -<NUM>で移動できる。
 setopt auto_pushd
 
+# ビープ音をオフにする。
 setopt no_beep
 
 # complement
