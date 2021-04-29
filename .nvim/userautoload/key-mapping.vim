@@ -21,6 +21,11 @@ nnoremap <Leader>p :Denite<Space>file_rec/git<CR>
 " Defx
 nnoremap <silent><C-e> :Defx<CR>
 
+" fugitive
+nnoremap <Leader>ga :Git add .<CR>
+nnoremap <Leader>gc :Git commit<CR>
+nnoremap <Leader>gp :Git push<CR>
+
 " Insert mode To Nomal mode keymap
 inoremap <silent> jj <ESC>
 
