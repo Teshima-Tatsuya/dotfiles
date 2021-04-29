@@ -41,3 +41,6 @@ repo = 'Shougo/neomru.vim'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
