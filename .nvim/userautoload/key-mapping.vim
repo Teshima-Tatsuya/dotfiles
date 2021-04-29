@@ -15,8 +15,8 @@ nnoremap <silent> ]B :blast<CR>
 nnoremap <silent> T <C-W>T<CR>
 
 " Denite
-nnoremap <Leader>f :Denite<Space>file_mru<CR>
-nnoremap <Leader>p :Denite<Space>file_rec/git<CR>
+nnoremap <Leader>df :Denite<Space>file_mru<CR>
+nnoremap <Leader>dp :Denite<Space>file_rec/git<CR>
 
 " Defx
 nnoremap <silent><C-e> :Defx<CR>
