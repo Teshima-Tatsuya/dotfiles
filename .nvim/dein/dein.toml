@@ -44,3 +44,7 @@ repo = 'itchyny/lightline.vim'
 
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
+
+[[plugins]]
+repo = 'hashivim/vim-terraform'
+on_ft = ['hcl', 'tf']
