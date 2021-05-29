@@ -7,9 +7,6 @@ on_i = 1
 repo = 'Shougo/defx.nvim'
 
 [[plugins]]
-repo = 'Shougo/deoppet.nvim'
-
-[[plugins]]
 repo = 'prabirshrestha/vim-lsp'
 
 [[plugins]]
