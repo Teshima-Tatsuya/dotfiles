@@ -22,12 +22,6 @@ repo = 'lighttiger2505/deoplete-vim-lsp'
 repo = 'tomasr/molokai'
 
 [[plugins]]
-repo = 'tpope/vim-rails'
-
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-
-[[plugins]]
 repo = 'airblade/vim-gitgutter'
 
 [[plugins]]

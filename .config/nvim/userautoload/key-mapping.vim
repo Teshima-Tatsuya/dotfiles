@@ -29,14 +29,6 @@ nnoremap <Leader>gp :Git push<CR>
 " Insert mode To Nomal mode keymap
 inoremap <silent> jj <ESC>
 
-" auto insert brackets
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap ( ()<LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
-
-
 " For conceal markers.
 if has('conceal')
   set conceallevel=2 concealcursor=niv
