@@ -68,7 +68,6 @@ call defx#custom#option('_', {
       \ 'winwidth': 30,
       \ 'split': 'vertical',
       \ 'direction': 'topleft',
-      \ 'show_ignored_files': 1,
       \ 'buffer_name': 'exlorer',
       \ 'toggle': 1,
       \ 'resume': 1,
