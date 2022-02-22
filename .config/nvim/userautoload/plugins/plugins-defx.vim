@@ -12,7 +12,7 @@ function! s:defx_my_settings() abort
     nnoremap <silent><buffer><expr> l
                 \ defx#do_action('drop')
     nnoremap <silent><buffer><expr> E
-                \ defx#do_action('drop', 'vsplit')
+                \ defx#do_action('drop')
     nnoremap <silent><buffer><expr> P
                 \ defx#do_action('preview')
     nnoremap <silent><buffer><expr> o
@@ -65,11 +65,6 @@ function! s:defx_my_settings() abort
 endfunction
 
 call defx#custom#option('_', {
-      \ 'winwidth': 30,
-      \ 'split': 'vertical',
-      \ 'direction': 'topleft',
-      \ 'buffer_name': 'exlorer',
-      \ 'toggle': 1,
-      \ 'resume': 1,
+      \ 'split': 'no',
       \ })
 

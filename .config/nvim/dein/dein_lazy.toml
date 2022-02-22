@@ -2,10 +2,3 @@
 repo = 'cespare/vim-toml'
 on_ft  = 'toml'
 
-[[plugins]]
-repo = 'tpope/vim-endwise'
-on_ft  = 'ruby'
-
-[[plugins]]
-repo = 'Shougo/deoplete-rct'
-on_ft = 'ruby'

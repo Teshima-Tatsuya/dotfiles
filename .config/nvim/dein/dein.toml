@@ -7,7 +7,10 @@ on_i = 1
 repo = 'Shougo/defx.nvim'
 
 [[plugins]]
-repo = 'prabirshrestha/vim-lsp'
+repo = 'Shougo/ddu.vim'
+
+[[plugins]]
+repo = 'vim-denops/denops.vim'
 
 [[plugins]]
 repo = 'mattn/vim-lsp-settings'
@@ -16,22 +19,11 @@ repo = 'mattn/vim-lsp-settings'
 repo = 'mattn/vim-goimports'
 
 [[plugins]]
-repo = 'lighttiger2505/deoplete-vim-lsp'
-
-[[plugins]]
 repo = 'tomasr/molokai'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
-repo = 'Shougo/denite.nvim'
-
-[[plugins]]
-repo = 'Shougo/neomru.vim'
-
-[[plugins]]
 repo = 'itchyny/lightline.vim'
 
-[[plugins]]
-repo = 'leafgarland/typescript-vim'
