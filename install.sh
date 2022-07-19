@@ -28,6 +28,12 @@ link() {
     done
 }
 
+install() {
+    if [ "$(uname)" == 'Darwin' ]; then
+        pushd $DOT_DIR/installer
+    fi
+}
+
 
 ## const area
 DOT_DIR="$HOME/dotfiles"
