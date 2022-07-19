@@ -57,3 +57,5 @@ fi
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="/opt/homebrew/opt/luajit-openresty/bin:$PATH"
+eval "$(starship init zsh)"
+
