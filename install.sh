@@ -24,7 +24,7 @@ link() {
         [[ "$f" == ".git" ]] && continue
         [[ "$f" == ".DS_Store" ]] && continue
 
-        ln -sf $DIR/$f ~/$f
+        ln -sf $DOT_DIR/$f ~/$f
     done
 }
 
