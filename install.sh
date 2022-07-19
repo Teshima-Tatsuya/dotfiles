@@ -17,7 +17,7 @@ download() {
 }
 
 link() {
-    DIR=$(cd $(dirname $0); pwd)
+    cd DOT_DIR
 
     for f in .??*
     do
