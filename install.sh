@@ -1,5 +1,39 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-DIR=$(cd $(dirname $0); pwd)
+## func area
 
-ln -sf $DIR/.config/nvim ~/.config/nvim
+# @return 0 is found, 1 is not found
+command_exists() {
+    which $1 > /dev/null 1>&2
+    return $?
+}
+
+download() {
+    if is_exists "git"; then
+        git clone $GIT_DIR
+    elif
+        echo "git command is not exist"
+    fi
+}
+
+link() {
+    DIR=$(cd $(dirname $0); pwd)
+
+    for f in .??*
+    do
+        [[ "$f" == ".git" ]] && continue
+        [[ "$f" == ".DS_Store" ]] && continue
+
+        ln -sf $DIR/$f ~/$f
+    done
+}
+
+
+## const area
+DOT_DIR="$HOME/dotfiles"
+GIT_DIR="https://github.com/Teshima-Tatsuya/dotfiles"
+
+
+## procedure area
+download
+link
