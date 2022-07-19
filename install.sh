@@ -17,14 +17,14 @@ download() {
 }
 
 link() {
-    cd DOT_DIR
+    cd $DOT_DIR
 
     for f in .??*
     do
         [[ "$f" == ".git" ]] && continue
         [[ "$f" == ".DS_Store" ]] && continue
 
-        ln -sf $DOT_DIR/$f ~/$f
+        ln -snf $DOT_DIR/$f $HOME
     done
 }
 
