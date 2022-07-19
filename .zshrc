@@ -45,6 +45,7 @@ autoload -U colors; colors
 PROMPT="%{${fg[green]}%}%n@%m%{${reset_color}%} %~
 %# "
 
+eval "$(anyenv init -)"
 if [ -f "${HOME}/.common.conf" ] ; then
   source "${HOME}/.common.conf"
 fi
@@ -55,5 +56,4 @@ fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-eval "$(anyenv init -)"
 export PATH="/opt/homebrew/opt/luajit-openresty/bin:$PATH"

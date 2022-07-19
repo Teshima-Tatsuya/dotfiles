@@ -3,7 +3,6 @@ let mapleader = "\<Space>"
 " key mapping
 nnoremap j gj
 nnoremap k gk
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 " buffer
 nnoremap <silent> [b :bprevious<CR>
