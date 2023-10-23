@@ -10,7 +10,7 @@ command_exists() {
 
 download() {
     if command_exists "git"; then
-        git clone $GIT_DIR
+        git clone $GIT_DIR $DOT_DIR
     else
         echo "git command is not exist"
     fi
