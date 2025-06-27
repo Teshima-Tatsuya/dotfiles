@@ -23,6 +23,7 @@ link() {
     do
         [[ "$f" == ".git" ]] && continue
         [[ "$f" == ".DS_Store" ]] && continue
+        [[ "$f" == ".config" ]] && continue
 
         ln -snf $DOT_DIR/$f $HOME
     done
