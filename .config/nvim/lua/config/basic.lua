@@ -9,6 +9,9 @@ local options = {
 	expandtab = true,
 	ignorecase = true,
 	smartcase = true,
+	autoindent = true,
+	smartindent = true,
+	cursorline = true,
 }
 
 for k, v in pairs(options) do
