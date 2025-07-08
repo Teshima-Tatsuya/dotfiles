@@ -12,6 +12,12 @@ local options = {
 	autoindent = true,
 	smartindent = true,
 	cursorline = true,
+	completeopt = {
+		"fuzzy",
+		"popup",
+		"menuone",
+		"noinsert",
+	}
 }
 
 for k, v in pairs(options) do
