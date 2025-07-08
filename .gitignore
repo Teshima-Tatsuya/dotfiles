@@ -15,3 +15,5 @@ state_nvim.vim
 .gitconfig.local
 
 .project
+
+.zsh_history
