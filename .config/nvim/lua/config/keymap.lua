@@ -1,5 +1,8 @@
 vim.keymap.set('n', '<C-e>', ':Neotree filesystem reveal left<CR>')
 vim.keymap.set('i', 'jj', '<ESC>')
+vim.keymap.set('n', ';', ':')
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+
 
 -- " key mapping
 -- nnoremap j gj

@@ -1,3 +1,5 @@
 require("config.lazy")
 require("config.basic")
+require("config.color")
 require("config.keymap")
+require("config.autocmd")
