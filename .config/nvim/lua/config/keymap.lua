@@ -1,5 +1,6 @@
--- " Leader
--- let mapleader = "\<Space>"
+vim.keymap.set('n', '<C-e>', ':Neotree filesystem reveal left<CR>')
+vim.keymap.set('i', 'jj', '<ESC>')
+
 -- " key mapping
 -- nnoremap j gj
 -- nnoremap k gk
@@ -12,21 +13,6 @@
 -- 
 -- " tab
 -- nnoremap <silent> T <C-W>T<CR>
--- 
--- " Denite
--- nnoremap <Leader>df :Denite<Space>file_mru<CR>
--- nnoremap <Leader>dp :Denite<Space>file_rec/git<CR>
--- 
--- " Defx
--- nnoremap <silent><C-e> :Defx<CR>
--- 
--- " Insert mode To Nomal mode keymap
--- inoremap <silent> jj <ESC>
--- 
--- " For conceal markers.
--- if has('conceal')
---   set conceallevel=2 concealcursor=niv
--- endif
 -- 
 -- " For terminal
 -- tnoremap <Esc> <C-\><C-n>
