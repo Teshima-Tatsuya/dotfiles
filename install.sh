@@ -44,3 +44,5 @@ GIT_DIR="https://github.com/Teshima-Tatsuya/dotfiles"
 ## procedure area
 download
 link
+
+ln -snf $DOT_DIR/.config/nvim $HOME/.config
