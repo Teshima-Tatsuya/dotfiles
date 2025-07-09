@@ -1,6 +1,8 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
+	autocrlf = false
+	filemode = false
 [color]
 	ui = auto
 	status = auto
