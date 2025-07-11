@@ -8,14 +8,6 @@ command_exists() {
     return $?
 }
 
-download() {
-    if command_exists "git"; then
-        git clone $GIT_DIR $DOT_DIR
-    else
-        echo "git command is not exist"
-    fi
-}
-
 link() {
     cd $DOT_DIR
 
@@ -37,12 +29,10 @@ install() {
 
 
 ## const area
-DOT_DIR="$HOME/dotfiles"
-GIT_DIR="https://github.com/Teshima-Tatsuya/dotfiles"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DOT_DIR="$SCRIPT_DIR"
 
 
 ## procedure area
-download
 link
-
 ln -snf $DOT_DIR/.config/nvim $HOME/.config
