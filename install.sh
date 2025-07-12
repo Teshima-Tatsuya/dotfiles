@@ -16,6 +16,7 @@ link() {
         [[ "$f" == ".git" ]] && continue
         [[ "$f" == ".DS_Store" ]] && continue
         [[ "$f" == ".config" ]] && continue
+        [[ "$f" == ".claude" ]] && continue
 
         ln -snf $DOT_DIR/$f $HOME
     done
@@ -37,3 +38,4 @@ DOT_DIR="$SCRIPT_DIR"
 link
 ln -snf $DOT_DIR/.config/nvim $HOME/.config
 ln -snf $DOT_DIR/.config/mise $HOME/.config
+ln -snf $DOT_DIR/.claude/settings.json $HOME/.claude/settings.json
