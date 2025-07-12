@@ -38,4 +38,5 @@ DOT_DIR="$SCRIPT_DIR"
 link
 ln -snf $DOT_DIR/.config/nvim $HOME/.config
 ln -snf $DOT_DIR/.config/mise $HOME/.config
-ln -snf $DOT_DIR/.claude/settings.json $HOME/.claude/settings.json
+ln -snf $DOT_DIR/.claude/settings.json $HOME/.claude/
+ln -snf $DOT_DIR/.claude/CLAUDE.md $HOME/.claude/
