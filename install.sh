@@ -36,3 +36,4 @@ DOT_DIR="$SCRIPT_DIR"
 ## procedure area
 link
 ln -snf $DOT_DIR/.config/nvim $HOME/.config
+ln -snf $DOT_DIR/.config/mise $HOME/.config
