@@ -2,7 +2,7 @@
     "permissions": {
         "allow": [
             "Read(*)",
-            "Bash(npx ccussage@latest)"
+            "Bash(npx ccusage@latest)"
         ]
     }
 }
