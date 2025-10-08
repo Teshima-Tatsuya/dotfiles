@@ -1,3 +1,5 @@
 [tools]
 lua-language-server = "latest"
 node = "24.2.0"
+rust = "latest"
+uv = "latest"
