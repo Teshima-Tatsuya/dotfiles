@@ -10,8 +10,14 @@
 	branch = auto
 	interactive = auto
 	grep = auto
+[fetch]
+    prune = true # automatically prune on fetch
+[pull]
+    rebase = true # default to rebase on pull
 [push]
-	default = current
+	default = current # push the current branch
+[merge]
+    ff = false # always create a merge commit
 [alias]
 	aa = add -A
 	co = checkout
