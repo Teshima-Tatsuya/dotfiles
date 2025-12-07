@@ -20,6 +20,7 @@ local options = {
     },
     clipboard = "unnamedplus",
     hidden = true,
+    confirm = true,
 }
 
 for k, v in pairs(options) do
