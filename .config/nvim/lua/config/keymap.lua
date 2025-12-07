@@ -4,6 +4,8 @@ vim.keymap.set('n', ';', ':')
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
 -- " buffer
+vim.keymap.set('n', ']b', ':bnext<CR>', { silent = true, desc = "Next buffer" })
+vim.keymap.set('n', '[b', ':bprev<CR>', { silent = true, desc = "Next buffer" })
 -- nnoremap <silent> [b :bprevious<CR>
 -- nnoremap <silent> ]b :bnext<CR>
 -- nnoremap <silent> [B :first<CR>
