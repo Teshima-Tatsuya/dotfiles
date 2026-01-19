@@ -1,5 +1,3 @@
--- ~/.config/nvim/lua/luasnip/rust.lua または適切な場所に配置
-
 local ls = require("luasnip")
 local s = ls.snippet
 local t = ls.text_node
@@ -153,3 +151,44 @@ ls.add_snippets("rust", {
         i(1, "// ここにコードを書く")
     })
 })
+=======
+return {
+    s("YN", {
+        t("fn yesno(b: bool) {"),
+        t({"", "    if b { println!(\"YES\") } else { println!(\"NO\") }"}),
+        t({"", "}"}),
+    }),
+    
+    s("yn", {
+        t("fn yesno(b: bool) {"),
+        t({"", "    if b { println!(\"Yes\") } else { println!(\"No\") }"}),
+        t({"", "}"}),
+    }),
+    
+    s("readi", {
+        t("fn readi() -> i32 {"),
+        t({"", "    let mut line = String::new();"}),
+        t({"", "    std::io::stdin().read_line(&mut line).unwrap();"}),
+        t({"", "    line.trim().parse().unwrap()"}),
+        t({"", "}"}),
+    }),
+    
+    s("reads", {
+        t("fn reads() -> String {"),
+        t({"", "    let mut line = String::new();"}),
+        t({"", "    std::io::stdin().read_line(&mut line).unwrap();"}),
+        t({"", "    line.trim().to_string()"}),
+        t({"", "}"}),
+    }),
+    
+    s("readi_l", {
+        t("fn readi_l() -> Vec<i32> {"),
+        t({"", "    let mut line = String::new();"}),
+        t({"", "    std::io::stdin().read_line(&mut line).unwrap();"}),
+        t({"", "    line.split_whitespace()"}),
+        t({"", "        .map(|s| s.parse().unwrap())"}),
+        t({"", "        .collect::<Vec<i32>>()"}),
+        t({"", "}"}),
+    }),
+}
+>>>>>>> f47ed2d (tmp)

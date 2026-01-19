@@ -2,6 +2,8 @@
     "permissions": {
         "allow": [
             "Read(*)",
+            "List(*)",
+            "Write(CLAUDE.md)",
             "Bash(npx ccusage@latest)"
         ]
     }

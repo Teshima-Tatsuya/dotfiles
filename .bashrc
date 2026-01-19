@@ -197,3 +197,5 @@
 # 
 # alias cd=cd_func
 PS1='\[\e[1:37m\]\w \[\e[37m\]\$\[\e[0m\] '
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path bash)"
