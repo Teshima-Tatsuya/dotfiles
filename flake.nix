@@ -24,12 +24,22 @@
       nix-darwin,
   }:
     let
-      username = builtins.getEnv "USER";
+      username = 
+        let
+            sudoUser = builtins.getEnv "SUDO_USER";
+            user = builtins.getEnv "USER";
+        in
+            if sudoUser!= "" then sudoUser
+            else user;
     in 
   {
     darwinConfigurations = {
         "my-macbook" = nix-darwin.lib.darwinSystem {
             system = "aarch64-darwin";
+
+            specialArgs = {
+                inherit username;
+            };
 
             modules = [
                 ./nix/darwin

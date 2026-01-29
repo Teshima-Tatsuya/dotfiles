@@ -1,10 +1,10 @@
-{ pkgs , ... }:
+{ pkgs , username, ... }:
 
 {
     system = {
         stateVersion = 5;
 
-        primaryUser = "tatsuya";
+        primaryUser = username;
 
         defaults = {
             controlcenter = {
@@ -13,8 +13,8 @@
         };
     };
 
-    users.users.tatsuya = {
-        home = "/Users/tatsuya";
+    users.users.${username} = {
+        home = "/Users/${username}";
         shell = pkgs.zsh;
     };
 
