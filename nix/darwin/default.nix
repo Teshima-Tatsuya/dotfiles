@@ -18,6 +18,9 @@
         shell = pkgs.zsh;
     };
 
+    # Register zsh in /etc/shells
+    environment.shells = [ pkgs.zsh ];
+
     nix.enable = false;
 
     environment.systemPackages = with pkgs; [
