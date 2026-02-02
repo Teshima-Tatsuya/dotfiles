@@ -1,4 +1,4 @@
-{ pkgs , username, ... }:
+{ pkgs , username, nixpkgs, ... }:
 
 {
     system = {
@@ -19,5 +19,10 @@
     };
 
     nix.enable = false;
+
+    environment.systemPackages = with pkgs; [
+        tmux
+        nixpkgs.legacyPackages.aarch64-darwin.ghostty-bin
+    ];
 
 }

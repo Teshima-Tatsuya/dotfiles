@@ -38,7 +38,7 @@
             system = "aarch64-darwin";
 
             specialArgs = {
-                inherit username;
+                inherit username nixpkgs;
             };
 
             modules = [
