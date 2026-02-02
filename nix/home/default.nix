@@ -1,4 +1,4 @@
-{ self, ... }:
+{ self, pkgs, ... }:
 
 {
     imports = [
@@ -6,6 +6,10 @@
     ];
 
     home.stateVersion = "24.05";
+
+    home.packages = with pkgs; [
+        awscli2
+    ];
 
     xdg.configFile."ghostty/config".source = "${self}/.config/ghostty/config";
 }
