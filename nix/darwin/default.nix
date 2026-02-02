@@ -1,4 +1,4 @@
-{ pkgs , username, nixpkgs, ... }:
+{ pkgs, self, username, nixpkgs, ... }:
 
 {
     system = {
@@ -24,5 +24,15 @@
         tmux
         nixpkgs.legacyPackages.aarch64-darwin.ghostty-bin
     ];
+
+    home-manager = {
+        useGlobalPkgs = true;
+        useUserPackages = true;
+        users.${username} = { ... }: {
+            home.stateVersion = "24.05";
+
+            xdg.configFile."ghostty/config".source = "${self}/.config/ghostty/config";
+        };
+    };
 
 }

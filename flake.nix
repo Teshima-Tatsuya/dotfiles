@@ -38,7 +38,8 @@
             system = "aarch64-darwin";
 
             specialArgs = {
-                inherit username nixpkgs;
+                # self: reference to flake source directory for accessing config files
+                inherit self username nixpkgs;
             };
 
             modules = [
