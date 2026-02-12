@@ -10,6 +10,7 @@
     home.packages = with pkgs; [
         awscli2
         oci-cli
+        zellij
     ];
 
     xdg.configFile."ghostty/config".source = "${self}/.config/ghostty/config";
