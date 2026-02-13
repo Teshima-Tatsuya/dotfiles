@@ -3,14 +3,15 @@
 {
     imports = [
         ./zsh.nix
+        ./zellij.nix
     ];
 
     home.stateVersion = "24.05";
 
+    programs.awscli.enable = true;
+
     home.packages = with pkgs; [
-        awscli2
         oci-cli
-        zellij
     ];
 
     xdg.configFile."ghostty/config".source = "${self}/.config/ghostty/config";
