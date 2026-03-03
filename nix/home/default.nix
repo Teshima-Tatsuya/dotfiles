@@ -12,6 +12,7 @@
 
     home.packages = with pkgs; [
         oci-cli
+        _1password-cli
     ];
 
     xdg.configFile."ghostty/config".source = "${self}/.config/ghostty/config";

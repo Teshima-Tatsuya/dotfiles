@@ -1,11 +1,10 @@
-{ pkgs, ... }:
+{ self, pkgs, ... }:
 
 {
     programs.zellij = {
         enable = true;
         enableZshIntegration = true;
-        settings = {
-            mouse_mode = false;
-        };
     };
+
+    xdg.configFile."zellij/config.kdl".source = "${self}/.config/zellij/config.kdl";
 }

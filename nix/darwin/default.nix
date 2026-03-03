@@ -21,6 +21,10 @@
     # Register zsh in /etc/shells
     environment.shells = [ pkgs.zsh ];
 
+    nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
+        "1password-cli"
+    ];
+
     nix.enable = false;
 
     environment.systemPackages = with pkgs; [
