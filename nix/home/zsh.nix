@@ -5,6 +5,19 @@
         zsh
     ];
 
+    # Additional PATH entries (highest priority first).
+    # Note: home.sessionPath is expanded in hm-session-vars.sh, which is
+    # sourced *before* programs.zsh.sessionVariables, so GOPATH is not yet
+    # defined at that point — use the literal path instead of "$GOPATH/bin".
+    home.sessionPath = [
+        "/opt/homebrew/opt/luajit-openresty/bin"
+        "\${KREW_ROOT:-$HOME/.krew}/bin"
+        "$HOME/.cargo/bin"
+        "$HOME/.yarn/bin"
+        "$HOME/.go/bin"
+        "$HOME/.local/bin"
+    ];
+
     programs.zsh = {
         enable = true;
 
@@ -48,16 +61,6 @@
             CLICOLOR = "true";
             DOCKER_HOST = "unix://\${HOME}/.colima/default/docker.sock";
         };
-
-        # Additional PATH entries
-        envExtra = ''
-            export PATH="$HOME/.local/bin:$PATH"
-            export PATH="$GOPATH/bin:$PATH"
-            export PATH="$HOME/.yarn/bin:$PATH"
-            export PATH="$HOME/.cargo/bin:$PATH"
-            export PATH="''${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-            export PATH="/opt/homebrew/opt/luajit-openresty/bin:$PATH"
-        '';
 
         # Shell options and custom config
         initContent = ''
