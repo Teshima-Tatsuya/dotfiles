@@ -51,6 +51,7 @@
 
         # Additional PATH entries
         envExtra = ''
+            export PATH="$HOME/.local/bin:$PATH"
             export PATH="$GOPATH/bin:$PATH"
             export PATH="$HOME/.yarn/bin:$PATH"
             export PATH="$HOME/.cargo/bin:$PATH"
