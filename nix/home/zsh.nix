@@ -11,7 +11,6 @@
     # defined at that point — use the literal path instead of "$GOPATH/bin".
     home.sessionPath = [
         "/opt/homebrew/opt/luajit-openresty/bin"
-        "\${KREW_ROOT:-$HOME/.krew}/bin"
         "$HOME/.cargo/bin"
         "$HOME/.yarn/bin"
         "$HOME/.go/bin"
@@ -72,11 +71,6 @@
             setopt bang_hist
             setopt hist_reduce_blanks
 
-            # Prompt
-            autoload -U colors; colors
-            PROMPT="%{''${fg[green]}%}%n@%m%{''${reset_color}%} %~
-%# "
-
             # peco-src function
             function peco-src () {
                 local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
@@ -91,12 +85,8 @@
 
             # iTerm2 integration
             test -e "''${HOME}/.iterm2_shell_integration.zsh" && source "''${HOME}/.iterm2_shell_integration.zsh"
-
-            # Starship prompt
-            eval "$(starship init zsh)"
-
-            # Kiro
-            [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
         '';
     };
+
+    programs.starship.enable = true;
 }

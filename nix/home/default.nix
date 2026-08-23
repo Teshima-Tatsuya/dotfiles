@@ -26,7 +26,6 @@
         git-secrets  # moved off brew
         neovim  # moved off brew
         peco  # moved off brew
-        starship  # moved off brew
         go  # moved off brew
         jq  # moved off brew
         typescript-language-server
