@@ -42,6 +42,7 @@
         shellAliases = {
             la = "ls -la";
             ll = "ls -l";
+            vim = "nvim";
         } // (if pkgs.stdenv.isDarwin then {
             ls = "ls -G";
         } else {
@@ -50,7 +51,7 @@
 
         # Environment variables
         sessionVariables = {
-            EDITOR = "vim";
+            EDITOR = "nvim";
             XDG_CONFIG_HOME = "$HOME/.config";
             GOPATH = "$HOME/.go";
             LSCOLORS = "Exfxcxdxbxegedabagacad";
