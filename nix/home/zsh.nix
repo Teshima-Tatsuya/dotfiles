@@ -59,7 +59,6 @@
             LS_COLORS = "di=01;34:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30";
             ZLS_COLORS = "$LS_COLORS";
             CLICOLOR = "true";
-            DOCKER_HOST = "unix://\${HOME}/.colima/default/docker.sock";
         };
 
         # Shell options and custom config
@@ -96,9 +95,6 @@
 
             # Starship prompt
             eval "$(starship init zsh)"
-
-            # mise
-            eval "$(mise activate zsh)"
 
             # Kiro
             [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"

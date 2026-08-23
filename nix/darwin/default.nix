@@ -32,6 +32,23 @@
         nixpkgs.legacyPackages.aarch64-darwin.ghostty-bin
     ];
 
+    homebrew = {
+        enable = true;
+        casks = [
+            "1password"
+            "notion"
+            "obsidian"
+            "visual-studio-code"
+            "google-chrome"
+            "claude"
+            "drawio"
+            "anki"
+        ];
+        onActivation = {
+            cleanup = "none";
+        };
+    };
+
     home-manager = {
         useGlobalPkgs = true;
         useUserPackages = true;
