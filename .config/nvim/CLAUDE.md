@@ -14,7 +14,7 @@ This is a modern Neovim configuration using lazy.nvim as the plugin manager. The
   - `keymap.lua`: Key mappings and shortcuts
   - `color.lua`: Colorscheme configuration
   - `autocmd.lua`: Auto commands
-  - `lsp.lua`: LSP configuration with auto-formatting and completion
+  - `lsp.lua`: LSP diagnostics display and format-on-save autocmd
 - `lua/plugins/`: Individual plugin configurations (one file per plugin)
 - `snippets/`: Custom code snippets directory
 - `lazy-lock.json`: Plugin version lockfile
@@ -23,17 +23,20 @@ This is a modern Neovim configuration using lazy.nvim as the plugin manager. The
 Uses lazy.nvim for plugin management. Each plugin is configured in its own file under `lua/plugins/`. The configuration automatically imports all plugins from the plugins directory.
 
 Key plugins include:
-- LSP: mason.nvim, nvim-lspconfig, mason-lspconfig.nvim
+- LSP: nvim-lspconfig
+- Completion: nvim-cmp, cmp-nvim-lsp
 - UI: neo-tree.nvim (file explorer), lualine.nvim (statusline), bufferline.nvim
 - Code assistance: copilot.vim, LuaSnip (snippets), nvim-autopairs
 - Git: gitsigns.nvim
 - Theme: tokyonight.nvim
 
 ### LSP Configuration
-LSP is configured in `lua/config/lsp.lua` with:
-- Auto-completion enabled with trigger on every character
-- Auto-formatting on save for supported language servers
-- Diagnostic configuration with virtual text enabled
+- `lua/plugins/lspconfig.lua`: enables servers via `vim.lsp.enable()`. There is
+  no installer plugin (mason.nvim) — each server binary must already be on
+  `PATH` (provided by Nix via `nix/home/default.nix`, or installed manually).
+  Enabled servers: `lua_ls`, `rust_analyzer`, `gopls`, `ts_ls`, `bashls`.
+- `lua/config/lsp.lua`: diagnostic display config (virtual text) and a
+  format-on-save autocmd for servers that support `textDocument/formatting`.
 
 ### Key Mappings
 Leader key is set to space. Notable mappings in `lua/config/keymap.lua`:
@@ -52,7 +55,6 @@ Leader key is set to space. Notable mappings in `lua/config/keymap.lua`:
 ### LSP Operations
 - LSP info: `:LspInfo`
 - Format current buffer: `:lua vim.lsp.buf.format()`
-- Mason (LSP installer): `:Mason`
 
 ### Configuration Testing
 To test configuration changes:
