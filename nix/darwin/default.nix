@@ -23,6 +23,7 @@
 
     nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
         "1password-cli"
+        "terraform"  # BSL 1.1, nixpkgs marks it unfree
     ];
 
     nix.enable = false;
