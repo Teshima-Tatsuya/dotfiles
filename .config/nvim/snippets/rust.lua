@@ -4,7 +4,7 @@ local t = ls.text_node
 local i = ls.insert_node
 
 -- Rust競プロ用Inputトレイトのスニペット
-ls.add_snippets("rust", {
+return {
     s("input_trait", {
         t({
             "use std::io;",
@@ -138,6 +138,7 @@ ls.add_snippets("rust", {
             "}"
         })
     }),
+
     s("yesno", {
         t({
             "fn yesno(a: bool) {",
@@ -149,22 +150,20 @@ ls.add_snippets("rust", {
             "}"
         }),
         i(1, "// ここにコードを書く")
-    })
-})
-=======
-return {
+    }),
+
     s("YN", {
         t("fn yesno(b: bool) {"),
         t({"", "    if b { println!(\"YES\") } else { println!(\"NO\") }"}),
         t({"", "}"}),
     }),
-    
+
     s("yn", {
         t("fn yesno(b: bool) {"),
         t({"", "    if b { println!(\"Yes\") } else { println!(\"No\") }"}),
         t({"", "}"}),
     }),
-    
+
     s("readi", {
         t("fn readi() -> i32 {"),
         t({"", "    let mut line = String::new();"}),
@@ -172,7 +171,7 @@ return {
         t({"", "    line.trim().parse().unwrap()"}),
         t({"", "}"}),
     }),
-    
+
     s("reads", {
         t("fn reads() -> String {"),
         t({"", "    let mut line = String::new();"}),
@@ -180,7 +179,7 @@ return {
         t({"", "    line.trim().to_string()"}),
         t({"", "}"}),
     }),
-    
+
     s("readi_l", {
         t("fn readi_l() -> Vec<i32> {"),
         t({"", "    let mut line = String::new();"}),
@@ -191,4 +190,3 @@ return {
         t({"", "}"}),
     }),
 }
->>>>>>> f47ed2d (tmp)
