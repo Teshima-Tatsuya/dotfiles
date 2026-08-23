@@ -34,6 +34,10 @@
         nixpkgs.legacyPackages.aarch64-darwin.ghostty-bin
     ];
 
+    fonts.packages = with pkgs; [
+        nerd-fonts.jetbrains-mono
+    ];
+
     homebrew = {
         enable = true;
         casks = [
