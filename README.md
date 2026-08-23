@@ -74,9 +74,9 @@ nix-collect-garbage -d
 │       ├── default.nix # Home Manager packages
 │       ├── zsh.nix      # Zsh configuration
 │       └── zellij.nix   # Zellij configuration
-├── .vimrc               # Legacy Vim configuration (fallback for plain `vim`)
-├── .config/nvim/         # Neovim configuration (primary editor)
-├── .config/              # Other XDG config files
+├── .config/nvim/         # Neovim configuration (only editor in use)
+├── .config/              # Other XDG config files (ghostty, zellij, ...)
+├── .gemrc                # RubyGems config (used by macOS's system Ruby)
 └── ...
 ```
 
@@ -85,7 +85,9 @@ nix-collect-garbage -d
 ### Nix-Darwin
 
 - macOS system defaults
-- Homebrew casks for GUI apps (declared in `nix/darwin/default.nix`, installed via `brew bundle`)
+- Homebrew casks for GUI apps (declared in `nix/darwin/default.nix`, installed via `brew bundle`) — Homebrew is not used for CLI formulae, only casks
+- Touch ID for `sudo` authentication
+- Nerd Font (JetBrainsMono, matching the Ghostty font)
 - User shell configuration (zsh)
 
 ### Home Manager
