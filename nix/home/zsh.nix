@@ -43,7 +43,6 @@
         shellAliases = {
             la = "ls -la";
             ll = "ls -l";
-            mux = "tmuxinator";
         } // (if pkgs.stdenv.isDarwin then {
             ls = "ls -G";
         } else {

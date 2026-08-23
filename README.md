@@ -68,12 +68,15 @@ nix-collect-garbage -d
 ├── flake.nix           # Flake configuration
 ├── flake.lock          # Locked dependencies
 ├── nix/
-│   └── darwin/
-│       └── default.nix # nix-darwin configuration
-├── .zshrc              # Zsh configuration
-├── .tmux.conf          # Tmux configuration
-├── .vimrc              # Vim configuration
-├── .config/            # XDG config files
+│   ├── darwin/
+│   │   └── default.nix # nix-darwin configuration (system + Homebrew casks)
+│   └── home/
+│       ├── default.nix # Home Manager packages
+│       ├── zsh.nix      # Zsh configuration
+│       └── zellij.nix   # Zellij configuration
+├── .vimrc               # Legacy Vim configuration (fallback for plain `vim`)
+├── .config/nvim/         # Neovim configuration (primary editor)
+├── .config/              # Other XDG config files
 └── ...
 ```
 
@@ -81,13 +84,13 @@ nix-collect-garbage -d
 
 ### Nix-Darwin
 
-- System packages (tmux, etc.)
 - macOS system defaults
+- Homebrew casks for GUI apps (declared in `nix/darwin/default.nix`, installed via `brew bundle`)
 - User shell configuration (zsh)
 
-### Dotfiles
+### Home Manager
 
-- Shell: zsh, bash
-- Editor: vim
-- Terminal: tmux
+- CLI tools (terraform, node, rust toolchain, gh, ghq, neovim, etc.)
+- Shell: zsh
+- Terminal multiplexer: zellij
 - Git configuration
