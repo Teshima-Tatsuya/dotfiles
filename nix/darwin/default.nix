@@ -21,6 +21,8 @@
     # Register zsh in /etc/shells
     environment.shells = [ pkgs.zsh ];
 
+    security.pam.services.sudo_local.touchIdAuth = true;
+
     nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
         "1password-cli"
         "terraform"  # BSL 1.1, nixpkgs marks it unfree
