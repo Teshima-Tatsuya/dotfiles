@@ -30,6 +30,7 @@
         jq  # moved off brew
         typescript-language-server
         bash-language-server
+        cloudflared
     ];
 
     xdg.configFile."ghostty/config".source = "${self}/.config/ghostty/config";
