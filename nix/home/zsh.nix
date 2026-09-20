@@ -87,6 +87,17 @@
             # iTerm2 integration
             test -e "''${HOME}/.iterm2_shell_integration.zsh" && source "''${HOME}/.iterm2_shell_integration.zsh"
         '';
+
+        # .zshenv content: always sourced, even by non-interactive shells
+        # (e.g. Claude Code's Bash tool), unlike initContent (.zshrc, interactive only).
+        envExtra = ''
+            # 1Password Service Account token for headless `op` CLI use (Claude Code, etc.)
+            # Kept out of the Nix store (world-readable) by reading it from a local,
+            # chmod 600 file instead of a sessionVariables literal.
+            if [ -r "''${HOME}/.config/op/claude-code-token" ]; then
+                export OP_SERVICE_ACCOUNT_TOKEN="$(cat "''${HOME}/.config/op/claude-code-token")"
+            fi
+        '';
     };
 
     programs.starship.enable = true;
