@@ -3,7 +3,7 @@
     "allow": [
       "Read(*)",
       "List(*)",
-      "Write(CLAUDE.md)",
+      "Edit(CLAUDE.md)",
       "Bash(npx ccusage@latest)"
     ]
   }
