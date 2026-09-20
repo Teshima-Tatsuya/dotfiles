@@ -43,5 +43,7 @@
     ]
   },
   "tui": "fullscreen",
-  "agentPushNotifEnabled": true
+  "theme": "dark",
+  "agentPushNotifEnabled": true,
+  "remoteControlAtStartup": true
 }

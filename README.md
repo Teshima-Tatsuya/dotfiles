@@ -25,10 +25,14 @@ experimental-features = nix-command flakes
 
 ### 3. Clone this repository
 
+Clone into the [ghq](https://github.com/x-motemen/ghq)-style path (`~/src/github.com/<owner>/<repo>`). ghq itself is installed later by Home Manager, so use plain `git` for this first clone:
+
 ```bash
-git clone https://github.com/Teshima-Tatsuya/dotfiles.git ~/dotfiles
-cd ~/dotfiles
+git clone https://github.com/Teshima-Tatsuya/dotfiles.git ~/src/github.com/Teshima-Tatsuya/dotfiles
+cd ~/src/github.com/Teshima-Tatsuya/dotfiles
 ```
+
+Once ghq is available, other repositories can be fetched with `ghq get <owner>/<repo>` (root: `~/src`).
 
 ### 4. Apply configuration
 
