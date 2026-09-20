@@ -48,5 +48,26 @@
             ];
         };
     };
+
+    homeConfigurations = {
+        # Standalone home-manager (no nix-darwin/NixOS) for the Claude Code
+        # exec container: brings the same CLI toolset as my-macbook. Claude
+        # Code itself is deliberately NOT managed here — it's installed via
+        # its own native installer with built-in auto-update, since nixpkgs
+        # can't keep pace with its release cadence.
+        "claude-code" = home-manager.lib.homeManagerConfiguration {
+            pkgs = import nixpkgs {
+                system = "x86_64-linux";
+                config.allowUnfreePredicate = pkg:
+                    builtins.elem (nixpkgs.lib.getName pkg) [ "1password-cli" "terraform" ];
+            };
+
+            extraSpecialArgs = { inherit self username; };
+
+            modules = [
+                ./nix/home/claude-code.nix
+            ];
+        };
+    };
   };
 }
