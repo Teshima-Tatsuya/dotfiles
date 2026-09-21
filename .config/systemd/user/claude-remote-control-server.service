@@ -1,0 +1,15 @@
+[Unit]
+Description=Claude Code Remote Control server (accepts sessions created from claude.ai/app)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/src/github.com/Teshima-Tatsuya
+# zsh login shell so ~/.zshenv (PATH, OP_SERVICE_ACCOUNT_TOKEN, ...) is loaded
+ExecStart=%h/.nix-profile/bin/zsh -lc 'export PATH=$HOME/.local/bin:$PATH; exec claude remote-control'
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=default.target
