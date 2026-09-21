@@ -100,3 +100,27 @@ nix-collect-garbage -d
 - Shell: zsh
 - Terminal multiplexer: zellij
 - Git configuration
+
+## Not Managed by Nix
+
+### Claude Code Remote Control server (Linux / LXC)
+
+`.config/systemd/user/claude-remote-control-server.service` keeps `claude remote-control` running as a systemd **user** service, so sessions created from claude.ai/code or the Claude mobile app are accepted. Nix does not manage it; restore it by hand:
+
+1. Prerequisites
+   - Sign in once with `claude` (`/login`).
+   - Trust the working directory once: `cd ~/src/github.com/Teshima-Tatsuya && claude`. The unit's `WorkingDirectory` must be a trusted workspace, otherwise the server exits with `Workspace not trusted`.
+   - Login shell is zsh and `~/.config/op/claude-code-token` exists (`chmod 600`), so the unit's `zsh -lc` picks up `OP_SERVICE_ACCOUNT_TOKEN` via `~/.zshenv`.
+2. Install and start
+
+   ```bash
+   mkdir -p ~/.config/systemd/user
+   cp .config/systemd/user/claude-remote-control-server.service ~/.config/systemd/user/
+   systemctl --user daemon-reload
+   systemctl --user enable --now claude-remote-control-server.service
+   sudo loginctl enable-linger "$USER"   # keep running after logout / start on boot
+   ```
+
+3. Check: `systemctl --user status claude-remote-control-server`. If `systemctl --user` fails with `Failed to connect to bus`, set `XDG_RUNTIME_DIR=/run/user/$(id -u)`.
+
+The copy in this repository is a backup: after editing the live unit, copy it back here. Run only one `claude remote-control` server per machine (don't also add a system-level unit).
