@@ -52,6 +52,7 @@
         # Environment variables
         sessionVariables = {
             EDITOR = "nvim";
+            LANG = "en_US.UTF-8";
             XDG_CONFIG_HOME = "$HOME/.config";
             GOPATH = "$HOME/.go";
             LSCOLORS = "Exfxcxdxbxegedabagacad";
