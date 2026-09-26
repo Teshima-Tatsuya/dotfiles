@@ -101,5 +101,11 @@
         '';
     };
 
-    programs.starship.enable = true;
+    programs.starship = {
+        enable = true;
+        settings = {
+            # Hide the "⬢ [Systemd]" badge shown inside the LXC container.
+            container.disabled = true;
+        };
+    };
 }
