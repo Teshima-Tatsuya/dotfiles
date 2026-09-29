@@ -6,6 +6,7 @@ Personal dotfiles managed with Nix (nix-darwin + Home Manager).
 
 - macOS (aarch64-darwin)
 - [Nix](https://nixos.org/download.html) with flakes enabled
+- [Homebrew](https://brew.sh/) (GUI apps are installed as casks via nix-darwin)
 
 ## Installation
 
@@ -34,23 +35,39 @@ cd ~/src/github.com/Teshima-Tatsuya/dotfiles
 
 Once ghq is available, other repositories can be fetched with `ghq get <owner>/<repo>` (root: `~/src`).
 
-### 4. Apply configuration
+### 4. Install Homebrew
+
+nix-darwin manages Homebrew casks declaratively, but does not install Homebrew itself.
 
 ```bash
-darwin-rebuild switch --flake .#my-macbook
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-> Note: Use `--impure` flag if your configuration requires environment variables:
-> ```bash
-> darwin-rebuild switch --flake .#my-macbook --impure
-> ```
+### 5. Apply configuration
+
+If `/etc/bashrc` or `/etc/zshrc` already exists (e.g. created by the Nix installer), nix-darwin aborts activation with an "Unexpected files in /etc" error. Rename them first:
+
+```bash
+sudo mv /etc/bashrc /etc/bashrc.before-nix-darwin
+sudo mv /etc/zshrc /etc/zshrc.before-nix-darwin
+```
+
+On a fresh machine `darwin-rebuild` does not exist yet, so run it through `nix run` for the first time:
+
+```bash
+sudo nix run nix-darwin -- switch --flake .#my-macbook --impure
+```
+
+After this, `darwin-rebuild` is available on `PATH`.
+
+> Note: `--impure` is required — `flake.nix` reads `$SUDO_USER` / `$USER` via `builtins.getEnv` to determine the username.
 
 ## Usage
 
 ### Rebuild system
 
 ```bash
-darwin-rebuild switch --flake .#my-macbook
+sudo darwin-rebuild switch --flake .#my-macbook --impure
 ```
 
 ### Update flake inputs
