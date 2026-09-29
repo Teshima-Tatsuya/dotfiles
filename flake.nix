@@ -31,7 +31,11 @@
         in
             if sudoUser!= "" then sudoUser
             else user;
-    in 
+
+      # Checkout location relative to $HOME (ghq layout). Used for
+      # out-of-store symlinks to configs that must stay writable.
+      dotfilesDir = "src/github.com/Teshima-Tatsuya/dotfiles";
+    in
   {
     darwinConfigurations = {
         "my-macbook" = nix-darwin.lib.darwinSystem {
@@ -39,7 +43,7 @@
 
             specialArgs = {
                 # self: reference to flake source directory for accessing config files
-                inherit self username nixpkgs;
+                inherit self username nixpkgs dotfilesDir;
             };
 
             modules = [
@@ -62,7 +66,7 @@
                     builtins.elem (nixpkgs.lib.getName pkg) [ "1password-cli" "terraform" ];
             };
 
-            extraSpecialArgs = { inherit self username; };
+            extraSpecialArgs = { inherit self username dotfilesDir; };
 
             modules = [
                 ./nix/home/claude-code.nix

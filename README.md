@@ -94,7 +94,10 @@ nix-collect-garbage -d
 │   └── home/
 │       ├── default.nix # Home Manager packages
 │       ├── zsh.nix      # Zsh configuration
-│       └── zellij.nix   # Zellij configuration
+│       ├── zellij.nix   # Zellij configuration
+│       ├── nvim.nix     # Neovim + LSP servers, links .config/nvim
+│       ├── ghostty.nix  # Ghostty configuration
+│       └── claude.nix   # Links ~/.claude/CLAUDE.md
 ├── .config/nvim/         # Neovim configuration (only editor in use)
 ├── .config/              # Other XDG config files (ghostty, zellij, ...)
 ├── .gemrc                # RubyGems config (used by macOS's system Ruby)

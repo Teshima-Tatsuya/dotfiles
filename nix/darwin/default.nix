@@ -1,4 +1,4 @@
-{ pkgs, self, username, nixpkgs, ... }:
+{ pkgs, self, username, nixpkgs, dotfilesDir, ... }:
 
 {
     system = {
@@ -111,7 +111,7 @@
     home-manager = {
         useGlobalPkgs = true;
         useUserPackages = true;
-        extraSpecialArgs = { inherit self; };
+        extraSpecialArgs = { inherit self dotfilesDir; };
         users.${username} = import ../home;
     };
 

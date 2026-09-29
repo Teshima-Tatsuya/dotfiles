@@ -1,5 +1,3 @@
-execute `npx ccusage@latest` when you have finished tasks.
-
 When a tool call is blocked (by the auto mode classifier, a hook, or an explicit user denial),
 do not try to route around it using a different tool, a rephrased command, or an indirect method.
 Stop, tell the user plainly what you were trying to do and why the capability seemed necessary,

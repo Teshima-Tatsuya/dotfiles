@@ -12,7 +12,6 @@
       "Read(*)",
       "List(*)",
       "Edit(CLAUDE.md)",
-      "Bash(npx ccusage@latest)",
       "Bash(git rm *)"
     ]
   },

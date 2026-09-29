@@ -1,9 +1,12 @@
-{ self, pkgs, ... }:
+{ pkgs, ... }:
 
 {
     imports = [
         ./zsh.nix
         ./zellij.nix
+        ./nvim.nix
+        ./ghostty.nix
+        ./claude.nix
     ];
 
     home.stateVersion = "24.05";
@@ -14,24 +17,17 @@
         oci-cli
         _1password-cli
         terraform
-        lua-language-server
         ripgrep
         uv
         rustc
         cargo
-        rust-analyzer
         nodejs_24
         gh  # moved off brew
         ghq  # moved off brew
         git-secrets  # moved off brew
-        neovim  # moved off brew
         peco  # moved off brew
         go  # moved off brew
         jq  # moved off brew
-        typescript-language-server
-        bash-language-server
         cloudflared
     ];
-
-    xdg.configFile."ghostty/config".source = "${self}/.config/ghostty/config";
 }
