@@ -10,6 +10,59 @@
             controlcenter = {
                 BatteryShowPercentage = true;
             };
+
+            # Tap to click
+            trackpad = {
+                Clicking = true;
+            };
+            NSGlobalDomain = {
+                "com.apple.mouse.tapBehavior" = 1;
+
+                # Key repeat instead of the accent popup on long press
+                ApplePressAndHoldEnabled = false;
+                KeyRepeat = 2;
+                InitialKeyRepeat = 15;
+
+                # Disable auto-correction / substitutions
+                NSAutomaticSpellingCorrectionEnabled = false;
+                NSAutomaticCapitalizationEnabled = false;
+                NSAutomaticQuoteSubstitutionEnabled = false;
+                NSAutomaticDashSubstitutionEnabled = false;
+                NSAutomaticPeriodSubstitutionEnabled = false;
+
+                AppleShowAllExtensions = true;
+
+                # Save dialogs: local by default, expanded
+                NSDocumentSaveNewDocumentsToCloud = false;
+                NSNavPanelExpandedStateForSaveMode = true;
+                NSNavPanelExpandedStateForSaveMode2 = true;
+            };
+
+            finder = {
+                AppleShowAllExtensions = true;
+                ShowPathbar = true;
+                ShowStatusBar = true;
+                FXPreferredViewStyle = "Nlsv";      # list view
+                FXDefaultSearchScope = "SCcf";      # search the current folder
+                FXEnableExtensionChangeWarning = false;
+                _FXSortFoldersFirst = true;
+            };
+
+            CustomUserPreferences = {
+                # Japanese IME: disable live conversion
+                "com.apple.inputmethod.Kotoeri" = {
+                    JIMPrefLiveConversionKey = false;
+                };
+                # Don't create .DS_Store on network / USB volumes
+                "com.apple.desktopservices" = {
+                    DSDontWriteNetworkStores = true;
+                    DSDontWriteUSBStores = true;
+                };
+                # Disable Apple personalized ads
+                "com.apple.AdLib" = {
+                    allowApplePersonalizedAdvertising = false;
+                };
+            };
         };
     };
 
