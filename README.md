@@ -97,7 +97,7 @@ nix-collect-garbage -d
 │       ├── zellij.nix   # Zellij configuration
 │       ├── nvim.nix     # Neovim + LSP servers, links .config/nvim
 │       ├── ghostty.nix  # Ghostty configuration
-│       └── claude.nix   # Links ~/.claude/CLAUDE.md
+│       └── claude.nix   # Links ~/.claude/{CLAUDE.md,settings.json,hooks}
 ├── .config/nvim/         # Neovim configuration (only editor in use)
 ├── .config/              # Other XDG config files (ghostty, zellij, ...)
 ├── .gemrc                # RubyGems config (used by macOS's system Ruby)
