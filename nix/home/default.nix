@@ -7,6 +7,8 @@
         ./nvim.nix
         ./ghostty.nix
         ./claude.nix
+        ./git.nix
+        ./ruby.nix
     ];
 
     home.stateVersion = "24.05";
@@ -24,7 +26,6 @@
         nodejs_24
         gh  # moved off brew
         ghq  # moved off brew
-        git-secrets  # moved off brew
         peco  # moved off brew
         go  # moved off brew
         jq  # moved off brew

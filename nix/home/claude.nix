@@ -10,4 +10,5 @@ in
     home.file.".claude/CLAUDE.md".source = link "CLAUDE.md";
     home.file.".claude/settings.json".source = link "settings.json";
     home.file.".claude/hooks".source = link "hooks";
+    home.file.".claude/skills".source = link "skills";
 }

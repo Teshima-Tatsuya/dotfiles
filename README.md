@@ -97,7 +97,9 @@ nix-collect-garbage -d
 │       ├── zellij.nix   # Zellij configuration
 │       ├── nvim.nix     # Neovim + LSP servers, links .config/nvim
 │       ├── ghostty.nix  # Ghostty configuration
-│       └── claude.nix   # Links ~/.claude/{CLAUDE.md,settings.json,hooks}
+│       ├── claude.nix   # Links ~/.claude/{CLAUDE.md,settings.json,hooks,skills}
+│       ├── git.nix      # ~/.gitconfig, ~/.gitignore_global, git-secrets template
+│       └── ruby.nix     # ~/.gemrc
 ├── .config/nvim/         # Neovim configuration (only editor in use)
 ├── .config/              # Other XDG config files (ghostty, zellij, ...)
 ├── .gemrc                # RubyGems config (used by macOS's system Ruby)
@@ -119,7 +121,7 @@ nix-collect-garbage -d
 - CLI tools (terraform, node, rust toolchain, gh, ghq, neovim, etc.)
 - Shell: zsh
 - Terminal multiplexer: zellij
-- Git configuration
+- Git configuration (`~/.gitconfig` is read-only; put `[user]`/signing and other machine-specific settings in `~/.gitconfig.local`, which it includes)
 
 ## Not Managed by Nix
 
